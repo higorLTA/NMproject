@@ -1,0 +1,61 @@
+COMANDOS:
+
+Localizar ONU:
+display ont info F S P ID
+
+display ont info by-sn 46494F475400E185-ONU
+
+display ont info by-desc "DESCRIÇÃO DA ONU"
+
+Verificar sinal da ONU:
+interface gpon F/S
+display ont optical-info P ID
+
+Verificar quedas da ONU:
+interface gpon F/S
+display ont register-info P ID
+
+Verificar serviço da ONU:
+display service-port port F/S/P ont ID
+
+Verificar se ONU está boiando:
+display ont autofind all
+
+Verificando a primária:
+Verificando se há rompimento:
+display ont info summary F/S/P
+
+
+Verificando sinal da primária (all onu):
+interface gpon F/S
+display ont optical-info P all
+
+Verificando trafego da ONU (Velocidade):
+interface gpon F/S
+display ont traffic P all
+
+Verificando a primária e porta
+display port desc F/S/P
+
+Acessar config huawei sem internet 
+display ont wan-info F/S P ID
+
+Verificar se há quedas :
+interface gpon F/S
+display ont register-info P/ID
+
+Verificar vlan
+vlan uplink all
+
+resetando onu que estao no dini perfil 33
+
+interface gpon 0/
+ont factory-setting-restore 2
+
+enable
+config
+display ont info by-sn 48575443EB2036AC
+
+DELETAR ONU
+
+delete

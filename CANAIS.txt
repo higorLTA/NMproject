@@ -1,0 +1,12 @@
+CANAIS: Canal 2.4Ghz: 1, 6 e 11
+Canal 5Ghz: 36, 44 e 149
+
+
+DNS: DNS Primario - 168.0.96.26
+DNS Secundario - 168.0.96.27
+
+
+DNS google - 8.8.8.8
+DNS Segundario - 8.8.4.4
+
+IP: 100.60 faixa

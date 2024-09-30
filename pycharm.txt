@@ -1,0 +1,5 @@
+pycharm
+
+Login: hlDevNM
+
+senha:padrão

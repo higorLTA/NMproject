@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSocket com Token</title>
+</head>
+<body>
+  <h1>Conexão com WebSocket</h1>
+  <script>
+    const token = '12345'; // Token para conexão
+
+    const ws = new WebSocket(`ws://localhost:3000/?token=${token}`);
+
+    ws.onopen = () => {
+      console.log('Conectado ao WebSocket');
+    };
+
+    ws.onmessage = (message) => {
+      console.log('Mensagem do servidor:', message.data);
+    };
+
+    ws.onclose = (event) => {
+      if (event.code === 1008) {
+        console.log('Conexão fechada: Token inválido');
+      }
+    };
+  </script>
+</body>
+</html>
